@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Restaurant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Catamaran:wght@200&family=Courgette&family=Dancing+Script:wght@700&family=Edu+TAS+Beginner:wght@700&family=Lato:wght@300;900&family=Mukta:wght@700&family=Mulish:wght@300&family=Open+Sans&family=PT+Sans:ital,wght@1,700&family=Poppins:wght@300&family=Raleway:wght@100&family=Roboto&family=Roboto+Condensed:wght@700&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/fd42c78aba.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="food.css">
+    <link rel="stylesheet" href="index.css">
+
+    <style>
+      
+        .nav-bold {
+            font-weight: bold;
+            color: #2c2c2c;
+            transition: color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-bold:hover {
+            color: #4e342e;
+            text-decoration: underline;
+            transform: translateY(-3px);
+        }
+
+        #payment {
+            padding: 30px;
+            background-color: #fff3e6;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 800px;
+            margin: 30px auto;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        #payment h2 {
+            color: #8b4513;
+            font-size: 28px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        input, button {
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: #8b4513;
+            color: white;
+            border: none;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #5c3310;
+        }
+
+        .upi-section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f9f1e7;
+            border-radius: 10px;
+        }
+
+        .upi-section img {
+            width: 250px;
+            margin: 15px auto;
+        }
+
+        .upi-section p {
+            margin: 10px 0;
+        }
+
+        .footer {
+            background: #2c2c2c url('Spark.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .footer .text {
+            margin-bottom: 20px;
+        }
+
+        .footer .text h2, .footer .text h1 {
+            color: #ffd700;
+        }
+
+        .social-icons i {
+            margin-right: 10px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header >
+        <nav >
+            <div class="logo">
+                <h1>Padharo...</h1>
+            </div>
+            <ul>
+                <li><a href="index.html" class="nav-bold" onclick="vibrateOnClick()">Home</a></li>
+                <li><a href="gallery.html" class="nav-bold" onclick="vibrateOnClick()">Gallery</a></li>
+                <li><a href="blogs.html" class="nav-bold" onclick="vibrateOnClick()">Blogs</a></li>
+                <li><a href="about.html" class="nav-bold" onclick="vibrateOnClick()">About Us</a></li>
+                <li><a href="booking.html" class="nav-bold" onclick="vibrateOnClick()">Table Booking</a></li>
+                <li><a href="addtocart.html" class="nav-bold" onclick="vibrateOnClick()">Add to Cart</a></li>
+                <li><a href="payment.html" class="nav-bold" onclick="vibrateOnClick()">Payment</a></li>
+                <li><a href="contact.html" class="nav-bold" onclick="vibrateOnClick()">Contact</a></li>
+                <li><a href="login.html" class="nav-bold" onclick="vibrateOnClick()">Login</a></li>
+            </ul>
+            <div class="icons">
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+            <i id="bar" class="fa-solid fa-bars"></i>
+        </nav>
+    </header>
+    <div style="background: url('b3.jpg') no-repeat center center/cover; padding: 40px 0;">
+    <!-- Main Payment Section -->
+    <main>
+        <div id="payment">
+            <h1><br><br>Choose Your Payment Method</h1>
+
+            <!-- Card Payment Form -->
+            <div>
+                <h2><br>Pay via Card</h2>
+                <form action="payment.php" method="post">
+                    <input type="text" name="cardName" placeholder="Cardholder Name" required>
+                    <input type="text" name="cardNumber" placeholder="Card Number" required>
+                    <input type="month" name="expiry" required>
+                    <input type="text" name="cvv" placeholder="CVV" required>
+                    <button type="submit">Make Card Payment</button>
+                </form>
+            </div>
+
+            <!-- UPI Payment Section -->
+            <div class="upi-section">
+                <h3>Pay via UPI (GPay / PhonePe / Paytm)</h3>
+                <p>Scan the QR code below to make the payment</p>
+                <img src="QR.jpg" alt="UPI QR Code">
+                <p>OR use UPI ID: <strong>8000460858@ibl</strong></p>
+                <p style="color: green;">After completing the UPI payment, please wait for confirmation or inform our staff.</p>
+            </div>
+        </div>
+    </main>
+</div>
+    <!-- Footer -->
+    <div class="footer">
+        <div class="text">
+            <h2>About Us</h2>
+            <p>Fresh Food</p>
+            <p>Quality</p>
+            <p>Affordable</p>
+            <p>Best Price</p>
+        </div>
+        <div class="text">
+            <h2>Top Dishes</h2>
+            <p>Paneer</p>
+            <p>Tikka</p>
+            <p>Pizza</p>
+            <p>Burger</p>
+        </div>
+        <div class="text">
+            <h2>Offers</h2>
+            <p>50% OFF</p>
+            <p>Bulk Order</p>
+            <p>Order Now</p>
+            <p>Coupons</p>
+        </div>
+        <div class="text">
+            <h1 class="sub-title">Contact Us</h1>
+            <p><i class="fas fa-paper-plane"></i> vishaljangid8378@gmail.com</p>
+            <p><i class="fas fa-phone-square-alt"></i> +91 8000460858</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="https://x.com/suhanibansal51"><i class="fab fa-twitter-square"></i></a>
+                <a href="https://www.instagram.com/vishalkivibes_8378"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/vishal-jangid-320083290"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vibration on click -->
+    <script>
+        function vibrateOnClick() {
+            if (navigator.vibrate) {
+                navigator.vibrate([100]);
+            }
+        }
+    </script>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="script1.js"></script>
+    <script src="index.js"></script>
+    <script src="food.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Restaurant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Catamaran:wght@200&family=Courgette&family=Dancing+Script:wght@700&family=Edu+TAS+Beginner:wght@700&family=Lato:wght@300;900&family=Mukta:wght@700&family=Mulish:wght@300&family=Open+Sans&family=PT+Sans:ital,wght@1,700&family=Poppins:wght@300&family=Raleway:wght@100&family=Roboto&family=Roboto+Condensed:wght@700&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/fd42c78aba.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .nav-rounded {
+            display: inline-block;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #4e342e; /* Dark brown */
+            padding: 10px 20px;
+            border-radius: 50px; /* Fully rounded corners */
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            text-decoration: none;
+        }
+        
+        .nav-rounded:hover {
+            background-color: #d7ccc8; /* Light mocha on hover */
+            color: #ac3c99;
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            list-style: none;
+        }
+        main {
+            padding: 40px;
+            text-align: center;
+            font-family: sans-serif;
+        }
+        #login-box {
+            background-color: #fce4ec;
+            max-width: 500px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+        #login-box h1 {
+            color: #4e342e;
+        }
+        #login-box form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        #login-box input {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        #login-box button {
+            padding: 10px;
+            background-color: #4e342e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #login-box button:hover {
+            background-color: #795548;
+        }
+        </style>
+
+    
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Padharo...</h1>
+        </div>
+        <nav>
+            
+            <ul>
+                <li><a href="index.html"  class="nav-rounded" onclick="vibrateOnClick()">Home</a></li>
+                <li><a href="gallery.html"  class="nav-rounded" onclick="vibrateOnClick()">GALLERY</a></li>
+                <li><a href="blogs.html"  class="nav-rounded" onclick="vibrateOnClick()">Blogs</a></li>
+                <li><a href="about.html"  class="nav-rounded" onclick="vibrateOnClick()">About Us</a></li>
+                <li><a href="booking.html"  class="nav-rounded" onclick="vibrateOnClick()">Table Booking</a></li>
+                <li><a href="addtocart.html"  class="nav-rounded" onclick="vibrateOnClick()">Add to Cart</a></li>
+                <li><a href="payment.html"  class="nav-rounded" onclick="vibrateOnClick()">Payment</a></li>
+                <li><a href="contact.html"  class="nav-rounded" onclick="vibrateOnClick()">Contact</a></li>
+              <li><a href="login.html"  class="nav-rounded" onclick="vibrateOnClick()">LOGIN</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+
+    <main >
+        <section   id="login-box">
+            <h1>Login</h1>
+            <form action="login.php" method="POST" >
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+
+            <p>Don't have an account? <a href="register.html">Register here</a></p>
+        </section>
+    </main>
+    <!-- <script src="script.js"></script>   -->
+    <script>
+        function vibrateOnClick() {
+            if (navigator.vibrate) {
+                navigator.vibrate([100]); // vibrate for 100ms
+            }
+        }
+        </script>
+    
+</body>
+</html>

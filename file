@@ -1,0 +1,116 @@
+https://iamafoodblog.com/
+
+<div class="text">
+                <h2>Connect On</h2>
+                <p>Twitter</p>
+                <p>Facebook</p>
+                <p>Instagram</p>
+                <p>YouTube</p>
+
+
+                <section id="addToCart" style="background-color: #ffe4c4; padding: 30px; border-radius: 10px; text-align: center; max-width: 600px; margin: 20px auto; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);">
+                    <h2 style="color: #8b4513; font-family: 'Arial', sans-serif;">Add to Cart</h2>
+                    <form id="cartForm" style="display: flex; flex-direction: column; gap: 15px; padding: 20px;">
+                        <label for="itemName" style="text-align: left; font-weight: bold; color: #555;">Item Name:</label>
+                        <input type="text" id="itemName" required style="padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;">
+                
+                        <label for="quantity" style="text-align: left; font-weight: bold; color: #555;">Quantity:</label>
+                        <input type="number" id="quantity" min="1" required style="padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;">
+                
+                        <button type="submit" style="padding: 12px; background-color: #8b4513; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; transition: background-color 0.3s;">
+                            Add to Cart
+                        </button>
+                    </form>
+                </section>
+                
+                <section id="payment" style="background-color: #fff3e6; padding: 30px; border-radius: 10px; text-align: center; max-width: 600px; margin: 20px auto; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);">
+                    <h2 style="color: #8b4513; font-family: 'Arial', sans-serif;">Payment</h2>
+                    <form id="paymentForm" style="display: flex; flex-direction: column; gap: 15px; padding: 20px;">
+                        <label for="cardName" style="text-align: left; font-weight: bold; color: #555;">Cardholder Name:</label>
+                        <input type="text" id="cardName" required style="padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;">
+                
+                        <label for="cardNumber" style="text-align: left; font-weight: bold; color: #555;">Card Number:</label>
+                        <input type="text" id="cardNumber" required style="padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;">
+                
+                        <label for="expiry" style="text-align: left; font-weight: bold; color: #555;">Expiry Date:</label>
+                        <input type="month" id="expiry" required style="padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;">
+                
+                        <label for="cvv" style="text-align: left; font-weight: bold; color: #555;">CVV:</label>
+                        <input type="text" id="cvv" required style="padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;">
+                
+                        <button type="submit" style="padding: 12px; background-color: #8b4513; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; transition: background-color 0.3s;">
+                            Make Payment
+                        </button>
+                    </form>
+                </section>
+
+
+
+
+
+
+
+
+
+                // JavaScript for Restaurant Management Website
+
+// Add event listener for the 'Add to Cart' form
+document.getElementById('cartForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent page reload
+
+    // Get item details from the form
+    const itemName = document.getElementById('itemName').value;
+    const quantity = document.getElementById('quantity').value;
+
+    // Store or display cart item (for demo purposes, logging it)
+    console.log(Item added to cart: ${itemName} (Quantity: ${quantity}));
+
+    // Optionally, you can add the item to a cart array
+    addToCart(itemName, quantity);
+
+    // Clear the form after submission
+    document.getElementById('cartForm').reset();
+});
+
+// Function to handle adding items to the cart
+const cart = []; // Array to store cart items
+
+function addToCart(itemName, quantity) {
+    const cartItem = {
+        itemName: itemName,
+        quantity: quantity
+    };
+    cart.push(cartItem);
+    alert(${quantity} of ${itemName} has been added to the cart!);
+    console.log(cart); // Log the current cart
+}
+
+// Add event listener for the 'Payment' form
+document.getElementById('paymentForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent page reload
+
+    // Get payment details from the form
+    const cardName = document.getElementById('cardName').value;
+    const cardNumber = document.getElementById('cardNumber').value;
+    const expiry = document.getElementById('expiry').value;
+    const cvv = document.getElementById('cvv').value;
+
+    // Validate the payment (basic validation)
+    if (validatePayment(cardNumber, cvv)) {
+        console.log(Payment Successful! Cardholder: ${cardName});
+        alert("Payment successful! Thank you for your order.");
+    } else {
+        alert("Invalid payment details. Please check and try again.");
+    }
+
+    // Clear the payment form
+    document.getElementById('paymentForm').reset();
+});
+
+// Function to validate payment (basic example)
+function validatePayment(cardNumber, cvv) {
+    const cardNumberPattern = /^\d{16}$/; // Check if card number is 16 digits
+    const cvvPattern = /^\d{3}$/; // Check if CVV is 3 digits
+
+    return cardNumberPattern.test(cardNumber) && cvvPattern.test(cvv);
+}

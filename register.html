@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Restaurant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .nav-rounded {
+            display: inline-block;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #4e342e;
+            padding: 10px 20px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            text-decoration: none;
+        }
+        .nav-rounded:hover {
+            background-color: #d7ccc8;
+            color: #3e2723;
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        }
+        
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            list-style: none;
+        }
+        main {
+            padding: 40px;
+            text-align: center;
+            font-family: sans-serif;
+        }
+        #register {
+            background-color: #fce4ec;
+            max-width: 500px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+        #register h1 {
+            color: #4e342e;
+        }
+        #register form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        #register input {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        #register button {
+            padding: 10px;
+            background-color: #4e342e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #register button:hover {
+            background-color: #795548;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Padharo...</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-rounded">Home</a></li>
+                <li><a href="gallery.html" class="nav-rounded">Gallery</a></li>
+                <li><a href="blogs.html" class="nav-rounded">Blogs</a></li>
+                <li><a href="about.html" class="nav-rounded">About Us</a></li>
+                <li><a href="booking.html" class="nav-rounded">Table Booking</a></li>
+                <li><a href="addtocart.html" class="nav-rounded">Add to Cart</a></li>
+                <li><a href="payment.html" class="nav-rounded">Payment</a></li>
+                <li><a href="contact.html" class="nav-rounded">Contact</a></li>
+                <li><a href="login.html" class="nav-rounded">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main >
+        <section id="register">
+            <h1>Create an Account</h1>
+            <form action="save.php" method="post" >
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Register</button>
+            </form>
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </section>
+    </main>
+</body>
+</html>

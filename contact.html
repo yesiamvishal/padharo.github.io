@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Restaurant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Catamaran:wght@200&family=Courgette&family=Dancing+Script:wght@700&family=Edu+TAS+Beginner:wght@700&family=Lato:wght@300;900&family=Mukta:wght@700&family=Mulish:wght@300&family=Open+Sans&family=PT+Sans:ital,wght@1,700&family=Poppins:wght@300&family=Raleway:wght@100&family=Roboto&family=Roboto+Condensed:wght@700&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/fd42c78aba.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="food.css">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .nav-bold {
+    font-weight: bold;
+    color: #2c2c2c; /* Very dark gray */
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block; /* Needed for transform to work */
+}
+
+.nav-bold:hover {
+    color: #4e342e; /* Deep brown */
+    text-decoration: underline;
+    transform: translateY(-3px); /* Moves up */
+}
+.footer {
+            background: #2c2c2c url('Spark.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .footer .text {
+            margin-bottom: 20px;
+        }
+
+        .footer .text h2, .footer .text h1 {
+            color: #ffd700;
+        }
+
+        .social-icons i {
+            margin-right: 10px;
+            color: white;
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Padharo...</h1>
+            </div>
+            <ul>
+                <li><a href="index.html" class="nav-bold" onclick="vibrateOnClick()">Home</a></li>
+                <li><a href="gallery.html"  class="nav-bold" onclick="vibrateOnClick()">Gallery</a></li>
+                <li><a href="blogs.html"  class="nav-bold" onclick="vibrateOnClick()">Blogs</a></li>
+                <li><a href="about.html"  class="nav-bold" onclick="vibrateOnClick()">About Us</a></li>
+                <li><a href="booking.html"  class="nav-bold" onclick="vibrateOnClick()">Table Booking</a></li>
+                <li><a href="addtocart.html"  class="nav-bold" onclick="vibrateOnClick()">Add to Cart</a></li>
+                <li><a href="payment.html"  class="nav-bold" onclick="vibrateOnClick()">Payment</a></li>
+              <li><a href="contact.html"  class="nav-bold" onclick="vibrateOnClick()">CONTACT</a></li>
+                <li><a href="login.html"  class="nav-bold" onclick="vibrateOnClick()">Login</a></li>
+            </ul>
+            <div class="icons">
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+            <i id="bar" class="fa-solid fa-bars"></i>
+        </nav>
+    </header>
+
+    <main style="background: url('Wukong.png') no-repeat center center/cover; padding: 40px 0;">
+        <div id="contact">
+            <div class="head">
+                <h1>Contact Us</h1>
+            </div>
+            <div class="contact">
+                <section id="contactSection" style="background-color: #fff3e6; padding: 30px; border-radius: 10px; text-align: center; max-width: 600px; margin: 20px auto; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);">
+                    <h2 style="color: #8b4513; font-family: 'Arial', sans-serif;">Get in Touch</h2>
+                    <form id="contactForm" action="contact.php" method="POST" style="display: flex; flex-direction: column; gap: 15px; padding: 20px;">
+                        <label for="contactName" style="text-align: left; font-weight: bold; color: #555;">Your Name:</label>
+                        <input type="text" id="contactName" name="contactName" required style="padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;">
+                    
+                        <label for="contactEmail" style="text-align: left; font-weight: bold; color: #555;">Your Email:</label>
+                        <input type="email" id="contactEmail" name="contactEmail" required style="padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;">
+                    
+                        <label for="contactMessage" style="text-align: left; font-weight: bold; color: #555;">Your Message:</label>
+                        <textarea id="contactMessage" name="contactMessage" required style="padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; resize: vertical;"></textarea>
+                    
+                        <button type="submit" style="padding: 12px; background-color: #8b4513; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; transition: background-color 0.3s;">
+                            Send Message
+                        </button>
+                    </form>
+                    
+                    <script src="script1.js"></script>
+                </section>
+            </div>
+        </div>
+    </main>
+    
+    <script src="script1.js"></script>
+    <script src="index.js"></script>
+    <script src="food.js"></script>
+    <div class="footer">
+        <div class="text">
+            <h2>About Us</h2>
+            <p>Fresh Food</p>
+            <p>Quality</p>
+            <p>Affordable</p>
+            <p>Best Price</p>
+
+
+        </div>
+        <div class="text">
+            <h2>Top Dishes</h2>
+            <p>Paneer</p>
+            <p>Tikka</p>
+            <p>Pizza</p>
+            <p>Burger</p>
+
+
+        </div>
+        <div class="text">
+            <h2>Offers</h2>
+            <p>50% OFF</p>
+            <p>Bulk Order</p>
+            <p>Order Now</p>
+            <p>Coupons</p>
+
+
+        </div>
+        <div class="text">
+            <h1 class="sub-title">Contact Us</h1>
+                <p><i class="fas fa-paper-plane"></i>vishaljangid8378@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i>+91 8000460858</p>
+                <div class="social-icons">
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/suhanibansal51?t=FCOL0Zxt3xfxgvIFmh183w&s=09"><i class="fab fa-twitter-square"></i></a>
+                    <a href="https://www.instagram.com/vishalkivibes_8378?igsh=OGExMnVhdWc5Yzgx"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/vishal-jangid-320083290?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+
+
+        </div>
+    </div>
+</div>
+<script>
+    function vibrateOnClick() {
+        if (navigator.vibrate) {
+            navigator.vibrate([100]); // vibrate for 100ms
+        }
+    }
+    </script>
+</body>
+</html>
